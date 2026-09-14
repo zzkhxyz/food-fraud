@@ -1,0 +1,13 @@
+data/
+results/
+results_test/
+full_run.log
+*.fastq.gz
+*.fasta
+*.tsv
+!labels.tsv
+!mock_truth.tsv
+!test_data/**
+!results/tables/**
+__pycache__/
+.snakemake/

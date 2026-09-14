@@ -1,0 +1,8 @@
+services:
+  pipeline:
+    build: .
+    image: food-fraud:latest
+    volumes:
+      - .:/work
+    working_dir: /work
+    command: snakemake --cores 8
