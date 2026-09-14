@@ -1,0 +1,69 @@
+email: "your_email@example.com"
+threads: 8
+
+illumina:
+  bioproject: PRJNA766222
+  marker: 16S
+  description: "Processed seafood products from the Italian market, mitochondrial 16S metabarcoding, NextSeq 500 2x125"
+
+nanopore_single_source:
+  bioproject: PRJNA1272083
+  description: "Single-source animal samples, four mitochondrial mini-barcodes, MinION"
+
+nanopore_mock:
+  bioproject: PRJEB39300
+  description: "Fish mixtures of known composition (cod, haddock, whiting, wolffish), MinION"
+
+reference:
+  bold_taxa:
+    - Gadidae
+    - Merlucciidae
+    - Scombridae
+    - Xiphiidae
+    - Salmonidae
+    - Clupeidae
+    - Engraulidae
+    - Moronidae
+    - Sparidae
+    - Mullidae
+    - Anarhichadidae
+    - Pleuronectidae
+    - Soleidae
+    - Triakidae
+    - Rajidae
+    - Petromyzontidae
+    - Penaeidae
+    - Channidae
+    - Cynoglossidae
+  refseq_query: "mitochondrion[Filter] AND srcdb_refseq[PROP] AND complete genome[Title]"
+  refseq_taxa:
+    - Actinopterygii
+    - Chondrichthyes
+    - Cyclostomata
+    - Malacostraca
+    - Cephalopoda
+    - Bivalvia
+
+thresholds:
+  min_identity: 97
+  min_identity_genus: 90
+  min_query_coverage: 90
+  min_margin_to_second: 2
+
+illumina_qc:
+  min_quality: 20
+  min_length: 100
+  min_overlap: 20
+  max_diffs: 5
+  max_expected_errors: 1.0
+  min_asv_size: 8
+
+nanopore_qc:
+  min_quality: 10
+  min_length: 80
+  max_length: 2000
+  max_reads: 20000
+
+sensitivity:
+  identity: [90, 93, 95, 97, 98, 99]
+  margin: [0, 1, 2, 3, 5]

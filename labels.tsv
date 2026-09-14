@@ -1,0 +1,21 @@
+library_name	product	declared_taxon	declared_rank	expectation
+1_Sea cutlets	Sea cutlets	fish	none	any fish
+2_Fish sticks	Fish sticks	fish	none	any fish
+3_Fish sticks	Fish sticks	fish	none	any fish
+4_Fish nuggets - Funny fish	Fish nuggets	fish	none	any fish
+5_Cooled breaded fish cutlets	Breaded fish cutlets	fish	none	any fish
+6_Frozen tuna burger	Tuna burger	Thunnus	genus	Thunnus spp.
+7_Frozen sea bass burger	Sea bass burger	Dicentrarchus labrax	species	Dicentrarchus labrax
+8_Tuna burger	Tuna burger	Thunnus	genus	Thunnus spp.
+9_Swordfish burger	Swordfish burger	Xiphias gladius	species	Xiphias gladius
+10_Salmon burger	Salmon burger	Salmo salar	species	Salmo salar or Oncorhynchus spp.
+11_Surimi stiks	Surimi sticks	fish	none	white fish, usually Gadus chalcogrammus
+12_Surimi stiks	Surimi sticks	fish	none	white fish, usually Gadus chalcogrammus
+13_Surimi Crab Claw	Surimi crab claw	fish	none	white fish, no crab expected
+14_Surimi stiks-shrimp flavour	Surimi sticks shrimp flavour	fish	none	white fish, shrimp flavour only
+15_Surimi Crab Claw	Surimi crab claw	fish	none	white fish, no crab expected
+16_Surimi exotic salad	Surimi exotic salad	fish	none	white fish
+17_Surimi Claw - Crab flavour	Surimi claw crab flavour	fish	none	white fish, no crab expected
+18_Frozen surimi stiks	Frozen surimi sticks	fish	none	white fish
+19_Surimi Claw - Crab flavour	Surimi claw crab flavour	fish	none	white fish, no crab expected
+20_Surimi slices	Surimi slices	fish	none	white fish
