@@ -1,0 +1,2 @@
+run_accession	sample_accession	sample_title	sample_alias	library_name	instrument_model	read_count	base_count	fastq_bytes	fastq_md5	fastq_ftp
+ERR4405444	SAMEA7117228	Cod	ExtC1a	unspecified	MinION	21364	10126729	9370575	22982feac4026844ea9fc611f8d5e442	ftp.sra.ebi.ac.uk/vol1/fastq/ERR440/004/ERR4405444/ERR4405444_1.fastq.gz

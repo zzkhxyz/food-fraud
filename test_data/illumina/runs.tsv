@@ -1,0 +1,2 @@
+run_accession	sample_accession	sample_title	sample_alias	library_name	instrument_model	read_count	base_count	fastq_bytes	fastq_md5	fastq_ftp
+SRR16088614	SAMN21839390	Metagenome or environmental sample from food metagenome	S25	8_Tuna burger	NextSeq 500	403000	101449457	15827236;14623750	a600a1777262b7df63ef60328e82f134;eac11de853f8503ecb6dddc93e07908a	ftp.sra.ebi.ac.uk/vol1/fastq/SRR160/014/SRR16088614/SRR16088614_1.fastq.gz;ftp.sra.ebi.ac.uk/vol1/fastq/SRR160/014/SRR16088614/SRR16088614_2.fastq.gz

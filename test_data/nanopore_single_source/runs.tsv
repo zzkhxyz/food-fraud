@@ -1,0 +1,2 @@
+run_accession	sample_accession	sample_title	sample_alias	library_name	instrument_model	read_count	base_count	fastq_bytes	fastq_md5	fastq_ftp
+SRR33849506	SAMN48894910	Model organism or animal sample from Gadus morhua	Atlantic cod processed tissue	76	MinION	85257	12865182	12338388	204b2ae11017389892db94ac00a72734	ftp.sra.ebi.ac.uk/vol1/fastq/SRR338/006/SRR33849506/SRR33849506_1.fastq.gz
