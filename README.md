@@ -202,6 +202,40 @@ the mixtures, showing that it can report more than one species in a single produ
 - Subsampling large Nanopore runs speeds up the run but lowers sensitivity for rare components in a
   mixture.
 
+## Conclusions
+
+Seafood is easy to mislabel because a processed product no longer looks like a fish. This project
+shows that reading the DNA from the product and comparing it with a reference of known species is a
+practical way to check the label, even for burgers, fish sticks and surimi.
+
+Our main conclusions are:
+
+1. **The method works, and we measured how well.** On the single-source control samples the pipeline
+   almost always finds the correct genus, but it is less able to separate very close species inside
+   the same genus. So a result like "this is cod or a close relative of cod" is reliable, while the
+   exact species is not always certain. This is a measured limit of a short single marker, not a
+   guess.
+
+2. **The named products match their label.** Where the label states a species (tuna, swordfish, sea
+   bass), the DNA agrees. We found no clear species swap in these branded products.
+
+3. **The surimi products are the interesting case.** These carry only a generic "fish" label. The
+   DNA often shows cheap small pelagic fish such as sardine, mackerel and anchovy instead of the
+   Alaska pollock usually expected in surimi. This is not illegal, because no species was promised,
+   but the buyer cannot know what fish they eat. As expected, the "crab flavour" surimi contains no
+   crab DNA, because the taste comes from an additive.
+
+4. **One product could not be identified, and that is safe behaviour.** Almost all reads of the
+   salmon burger stayed unassigned, most likely because the reference lacks enough salmon sequences.
+   The method answered "unknown" instead of giving a wrong species, which is the safer type of
+   error.
+
+Overall, DNA barcoding can verify seafood labels even after heavy processing. In our sample the main
+signal is not a hidden swap of an expensive species for a cheap one under a false name, but a lack of
+detail: products without a species name that in fact use cheaper fish. The confidence of every call
+depends on how complete the reference database is; where a reference is missing, the method returns
+"unassigned" rather than a false result.
+
 ## Layout
 
 - `config.yaml` - accessions, reference taxa, QC parameters and identification thresholds.
