@@ -236,6 +236,27 @@ detail: products without a species name that in fact use cheaper fish. The confi
 depends on how complete the reference database is; where a reference is missing, the method returns
 "unassigned" rather than a false result.
 
+## Web dashboard
+
+An interactive summary of the results lives in `web/`. It is a single static page that reads a small
+`web/data.json` file, so it needs no server code and can be hosted anywhere.
+
+Rebuild the data file from the results after a run:
+
+```
+python scripts/build_web_data.py results web/data.json
+```
+
+Preview it locally:
+
+```
+python -m http.server -d web 8000
+```
+
+Then open `http://localhost:8000`. To publish it on Vercel, import this repository, set the **Root
+Directory** to `web`, and choose the "Other" framework preset (no build step). Every push then
+redeploys the page automatically.
+
 ## Layout
 
 - `config.yaml` - accessions, reference taxa, QC parameters and identification thresholds.
@@ -245,6 +266,7 @@ depends on how complete the reference database is; where a reference is missing,
 - `Snakefile` - the workflow that connects every step.
 - `environment.yml`, `Dockerfile`, `docker-compose.yml` - the locked, reproducible environment.
 - `test_data/` - one small run per dataset for the quick test.
+- `web/` - a static dashboard of the results, ready to deploy on Vercel.
 
 ## Contribution statement
 
