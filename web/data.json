@@ -1,0 +1,1071 @@
+{
+  "reference": [
+    {
+      "marker": "12S",
+      "sequences": 4922,
+      "species": 4885
+    },
+    {
+      "marker": "16S",
+      "sequences": 4939,
+      "species": 4885
+    },
+    {
+      "marker": "COI",
+      "sequences": 29200,
+      "species": 5813
+    },
+    {
+      "marker": "CYTB",
+      "sequences": 4922,
+      "species": 4891
+    }
+  ],
+  "illumina": [
+    {
+      "run": "SRR16088612",
+      "product": "Salmon burger",
+      "declared": "Salmo salar",
+      "expectation": "Salmo salar or Oncorhynchus spp.",
+      "main_taxon": "unassigned",
+      "main_fraction": 0.9759,
+      "unassigned_fraction": 0.9759,
+      "verdict": "label not confirmed"
+    },
+    {
+      "run": "SRR16088613",
+      "product": "Swordfish burger",
+      "declared": "Xiphias gladius",
+      "expectation": "Xiphias gladius",
+      "main_taxon": "unassigned",
+      "main_fraction": 0.66,
+      "unassigned_fraction": 0.66,
+      "verdict": "label confirmed"
+    },
+    {
+      "run": "SRR16088614",
+      "product": "Tuna burger",
+      "declared": "Thunnus",
+      "expectation": "Thunnus spp.",
+      "main_taxon": "Thunnus",
+      "main_fraction": 0.9231,
+      "unassigned_fraction": 0.0769,
+      "verdict": "label confirmed"
+    },
+    {
+      "run": "SRR16088615",
+      "product": "Sea bass burger",
+      "declared": "Dicentrarchus labrax",
+      "expectation": "Dicentrarchus labrax",
+      "main_taxon": "Dicentrarchus labrax",
+      "main_fraction": 0.634,
+      "unassigned_fraction": 0.3655,
+      "verdict": "label confirmed"
+    },
+    {
+      "run": "SRR16088616",
+      "product": "Tuna burger",
+      "declared": "Thunnus",
+      "expectation": "Thunnus spp.",
+      "main_taxon": "Thunnus",
+      "main_fraction": 0.8633,
+      "unassigned_fraction": 0.1213,
+      "verdict": "label confirmed"
+    },
+    {
+      "run": "SRR16088617",
+      "product": "Breaded fish cutlets",
+      "declared": "fish",
+      "expectation": "any fish",
+      "main_taxon": "Gadus",
+      "main_fraction": 1.0,
+      "unassigned_fraction": 0.0,
+      "verdict": "label not specific"
+    },
+    {
+      "run": "SRR16088618",
+      "product": "Fish nuggets",
+      "declared": "fish",
+      "expectation": "any fish",
+      "main_taxon": "Gadus",
+      "main_fraction": 0.9996,
+      "unassigned_fraction": 0.0,
+      "verdict": "label not specific"
+    },
+    {
+      "run": "SRR16088619",
+      "product": "Fish sticks",
+      "declared": "fish",
+      "expectation": "any fish",
+      "main_taxon": "Gadus",
+      "main_fraction": 0.9999,
+      "unassigned_fraction": 0.0,
+      "verdict": "label not specific"
+    },
+    {
+      "run": "SRR16088620",
+      "product": "Surimi slices",
+      "declared": "fish",
+      "expectation": "white fish",
+      "main_taxon": "Gadus",
+      "main_fraction": 0.8674,
+      "unassigned_fraction": 0.0,
+      "verdict": "label not specific"
+    },
+    {
+      "run": "SRR16088621",
+      "product": "Surimi claw crab flavour",
+      "declared": "fish",
+      "expectation": "white fish, no crab expected",
+      "main_taxon": "Scomber",
+      "main_fraction": 0.403,
+      "unassigned_fraction": 0.0923,
+      "verdict": "label not specific"
+    },
+    {
+      "run": "SRR16088622",
+      "product": "Frozen surimi sticks",
+      "declared": "fish",
+      "expectation": "white fish",
+      "main_taxon": "Gadus",
+      "main_fraction": 0.5692,
+      "unassigned_fraction": 0.104,
+      "verdict": "label not specific"
+    },
+    {
+      "run": "SRR16088623",
+      "product": "Surimi claw crab flavour",
+      "declared": "fish",
+      "expectation": "white fish, no crab expected",
+      "main_taxon": "unassigned",
+      "main_fraction": 0.3398,
+      "unassigned_fraction": 0.3398,
+      "verdict": "label not specific"
+    },
+    {
+      "run": "SRR16088624",
+      "product": "Surimi exotic salad",
+      "declared": "fish",
+      "expectation": "white fish",
+      "main_taxon": "Sardinella",
+      "main_fraction": 0.4371,
+      "unassigned_fraction": 0.3007,
+      "verdict": "label not specific"
+    },
+    {
+      "run": "SRR16088625",
+      "product": "Surimi crab claw",
+      "declared": "fish",
+      "expectation": "white fish, no crab expected",
+      "main_taxon": "Nematalosa japonica",
+      "main_fraction": 0.2653,
+      "unassigned_fraction": 0.133,
+      "verdict": "label not specific"
+    },
+    {
+      "run": "SRR16088626",
+      "product": "Surimi sticks shrimp flavour",
+      "declared": "fish",
+      "expectation": "white fish, shrimp flavour only",
+      "main_taxon": "unassigned",
+      "main_fraction": 0.3013,
+      "unassigned_fraction": 0.3013,
+      "verdict": "label not specific"
+    },
+    {
+      "run": "SRR16088627",
+      "product": "Surimi crab claw",
+      "declared": "fish",
+      "expectation": "white fish, no crab expected",
+      "main_taxon": "Sardinella",
+      "main_fraction": 0.9538,
+      "unassigned_fraction": 0.0261,
+      "verdict": "label not specific"
+    },
+    {
+      "run": "SRR16088628",
+      "product": "Surimi sticks",
+      "declared": "fish",
+      "expectation": "white fish, usually Gadus chalcogrammus",
+      "main_taxon": "Sardinella",
+      "main_fraction": 0.9559,
+      "unassigned_fraction": 0.0295,
+      "verdict": "label not specific"
+    },
+    {
+      "run": "SRR16088629",
+      "product": "Surimi sticks",
+      "declared": "fish",
+      "expectation": "white fish, usually Gadus chalcogrammus",
+      "main_taxon": "Sardinella",
+      "main_fraction": 0.7695,
+      "unassigned_fraction": 0.0631,
+      "verdict": "label not specific"
+    },
+    {
+      "run": "SRR16088630",
+      "product": "Fish sticks",
+      "declared": "fish",
+      "expectation": "any fish",
+      "main_taxon": "Gadus",
+      "main_fraction": 0.5952,
+      "unassigned_fraction": 0.3802,
+      "verdict": "label not specific"
+    },
+    {
+      "run": "SRR16088631",
+      "product": "Sea cutlets",
+      "declared": "fish",
+      "expectation": "any fish",
+      "main_taxon": "unassigned",
+      "main_fraction": 0.851,
+      "unassigned_fraction": 0.851,
+      "verdict": "label not specific"
+    }
+  ],
+  "composition": {
+    "SRR16088612": [
+      {
+        "taxon": "unassigned",
+        "rank": "none",
+        "fraction": 0.9759
+      },
+      {
+        "taxon": "Oncorhynchus",
+        "rank": "genus",
+        "fraction": 0.0198
+      },
+      {
+        "taxon": "Merluccius",
+        "rank": "genus",
+        "fraction": 0.0025
+      },
+      {
+        "taxon": "Xiphias gladius",
+        "rank": "species",
+        "fraction": 0.0017
+      },
+      {
+        "taxon": "Pollachius virens",
+        "rank": "species",
+        "fraction": 0.0001
+      }
+    ],
+    "SRR16088613": [
+      {
+        "taxon": "unassigned",
+        "rank": "none",
+        "fraction": 0.66
+      },
+      {
+        "taxon": "Xiphias gladius",
+        "rank": "species",
+        "fraction": 0.3389
+      },
+      {
+        "taxon": "Acanthosepion",
+        "rank": "genus",
+        "fraction": 0.0011
+      }
+    ],
+    "SRR16088614": [
+      {
+        "taxon": "Thunnus",
+        "rank": "genus",
+        "fraction": 0.9231
+      },
+      {
+        "taxon": "unassigned",
+        "rank": "none",
+        "fraction": 0.0769
+      }
+    ],
+    "SRR16088615": [
+      {
+        "taxon": "Dicentrarchus labrax",
+        "rank": "species",
+        "fraction": 0.634
+      },
+      {
+        "taxon": "unassigned",
+        "rank": "none",
+        "fraction": 0.3655
+      },
+      {
+        "taxon": "Sparus aurata",
+        "rank": "species",
+        "fraction": 0.0005
+      }
+    ],
+    "SRR16088616": [
+      {
+        "taxon": "Thunnus",
+        "rank": "genus",
+        "fraction": 0.8633
+      },
+      {
+        "taxon": "unassigned",
+        "rank": "none",
+        "fraction": 0.1213
+      },
+      {
+        "taxon": "Gadus",
+        "rank": "genus",
+        "fraction": 0.0131
+      },
+      {
+        "taxon": "Merluccius productus",
+        "rank": "species",
+        "fraction": 0.0016
+      },
+      {
+        "taxon": "Melanogrammus aeglefinus",
+        "rank": "species",
+        "fraction": 0.0006
+      },
+      {
+        "taxon": "Saurida",
+        "rank": "genus",
+        "fraction": 0.0
+      }
+    ],
+    "SRR16088617": [
+      {
+        "taxon": "Gadus",
+        "rank": "genus",
+        "fraction": 1.0
+      }
+    ],
+    "SRR16088618": [
+      {
+        "taxon": "Gadus",
+        "rank": "genus",
+        "fraction": 0.9996
+      },
+      {
+        "taxon": "Sardinella",
+        "rank": "genus",
+        "fraction": 0.0002
+      },
+      {
+        "taxon": "Pollachius virens",
+        "rank": "species",
+        "fraction": 0.0002
+      }
+    ],
+    "SRR16088619": [
+      {
+        "taxon": "Gadus",
+        "rank": "genus",
+        "fraction": 0.9999
+      },
+      {
+        "taxon": "Sardinella",
+        "rank": "genus",
+        "fraction": 0.0001
+      }
+    ],
+    "SRR16088620": [
+      {
+        "taxon": "Gadus",
+        "rank": "genus",
+        "fraction": 0.8674
+      },
+      {
+        "taxon": "Merluccius productus",
+        "rank": "species",
+        "fraction": 0.128
+      },
+      {
+        "taxon": "Saurida",
+        "rank": "genus",
+        "fraction": 0.0028
+      },
+      {
+        "taxon": "Merluccius",
+        "rank": "genus",
+        "fraction": 0.0007
+      },
+      {
+        "taxon": "Clupea",
+        "rank": "genus",
+        "fraction": 0.0006
+      },
+      {
+        "taxon": "Odonus niger",
+        "rank": "species",
+        "fraction": 0.0002
+      }
+    ],
+    "SRR16088621": [
+      {
+        "taxon": "Scomber",
+        "rank": "genus",
+        "fraction": 0.403
+      },
+      {
+        "taxon": "Lepidotrigla",
+        "rank": "genus",
+        "fraction": 0.2787
+      },
+      {
+        "taxon": "Chelidonichthys",
+        "rank": "genus",
+        "fraction": 0.1036
+      },
+      {
+        "taxon": "unassigned",
+        "rank": "none",
+        "fraction": 0.0923
+      },
+      {
+        "taxon": "Lophius litulon",
+        "rank": "species",
+        "fraction": 0.0772
+      },
+      {
+        "taxon": "Auxis",
+        "rank": "genus",
+        "fraction": 0.0245
+      }
+    ],
+    "SRR16088622": [
+      {
+        "taxon": "Gadus",
+        "rank": "genus",
+        "fraction": 0.5692
+      },
+      {
+        "taxon": "Engraulis ringens",
+        "rank": "species",
+        "fraction": 0.2508
+      },
+      {
+        "taxon": "unassigned",
+        "rank": "none",
+        "fraction": 0.104
+      },
+      {
+        "taxon": "Sardinella",
+        "rank": "genus",
+        "fraction": 0.058
+      },
+      {
+        "taxon": "Merluccius productus",
+        "rank": "species",
+        "fraction": 0.0173
+      },
+      {
+        "taxon": "Dussumieria elopsoides",
+        "rank": "species",
+        "fraction": 0.0002
+      }
+    ],
+    "SRR16088623": [
+      {
+        "taxon": "unassigned",
+        "rank": "none",
+        "fraction": 0.3398
+      },
+      {
+        "taxon": "Engraulis ringens",
+        "rank": "species",
+        "fraction": 0.2709
+      },
+      {
+        "taxon": "Sardinella",
+        "rank": "genus",
+        "fraction": 0.2047
+      },
+      {
+        "taxon": "Engraulis",
+        "rank": "genus",
+        "fraction": 0.1056
+      },
+      {
+        "taxon": "Thryssa",
+        "rank": "genus",
+        "fraction": 0.0441
+      },
+      {
+        "taxon": "Gadus",
+        "rank": "genus",
+        "fraction": 0.0203
+      }
+    ],
+    "SRR16088624": [
+      {
+        "taxon": "Sardinella",
+        "rank": "genus",
+        "fraction": 0.4371
+      },
+      {
+        "taxon": "unassigned",
+        "rank": "none",
+        "fraction": 0.3007
+      },
+      {
+        "taxon": "Rastrelliger",
+        "rank": "genus",
+        "fraction": 0.1125
+      },
+      {
+        "taxon": "Dussumieria elopsoides",
+        "rank": "species",
+        "fraction": 0.0951
+      },
+      {
+        "taxon": "Engraulis ringens",
+        "rank": "species",
+        "fraction": 0.0125
+      },
+      {
+        "taxon": "Lutjanus",
+        "rank": "genus",
+        "fraction": 0.0069
+      }
+    ],
+    "SRR16088625": [
+      {
+        "taxon": "Nematalosa japonica",
+        "rank": "species",
+        "fraction": 0.2653
+      },
+      {
+        "taxon": "Scomber",
+        "rank": "genus",
+        "fraction": 0.1786
+      },
+      {
+        "taxon": "Gadus",
+        "rank": "genus",
+        "fraction": 0.158
+      },
+      {
+        "taxon": "unassigned",
+        "rank": "none",
+        "fraction": 0.133
+      },
+      {
+        "taxon": "Ariomma lurida",
+        "rank": "species",
+        "fraction": 0.0847
+      },
+      {
+        "taxon": "Miichthys miiuy",
+        "rank": "species",
+        "fraction": 0.0393
+      }
+    ],
+    "SRR16088626": [
+      {
+        "taxon": "unassigned",
+        "rank": "none",
+        "fraction": 0.3013
+      },
+      {
+        "taxon": "Lutjanus",
+        "rank": "genus",
+        "fraction": 0.2936
+      },
+      {
+        "taxon": "Priacanthus macracanthus",
+        "rank": "species",
+        "fraction": 0.0998
+      },
+      {
+        "taxon": "Parupeneus heptacantha",
+        "rank": "species",
+        "fraction": 0.0953
+      },
+      {
+        "taxon": "Nemipterus",
+        "rank": "genus",
+        "fraction": 0.0872
+      },
+      {
+        "taxon": "Pristipomoides multidens",
+        "rank": "species",
+        "fraction": 0.0319
+      }
+    ],
+    "SRR16088627": [
+      {
+        "taxon": "Sardinella",
+        "rank": "genus",
+        "fraction": 0.9538
+      },
+      {
+        "taxon": "unassigned",
+        "rank": "none",
+        "fraction": 0.0261
+      },
+      {
+        "taxon": "Cubiceps pauciradiatus",
+        "rank": "species",
+        "fraction": 0.0086
+      },
+      {
+        "taxon": "Scomber",
+        "rank": "genus",
+        "fraction": 0.005
+      },
+      {
+        "taxon": "Lepidotrigla",
+        "rank": "genus",
+        "fraction": 0.0018
+      },
+      {
+        "taxon": "Thunnus",
+        "rank": "genus",
+        "fraction": 0.0013
+      }
+    ],
+    "SRR16088628": [
+      {
+        "taxon": "Sardinella",
+        "rank": "genus",
+        "fraction": 0.9559
+      },
+      {
+        "taxon": "unassigned",
+        "rank": "none",
+        "fraction": 0.0295
+      },
+      {
+        "taxon": "Rastrelliger",
+        "rank": "genus",
+        "fraction": 0.0119
+      },
+      {
+        "taxon": "Nematalosa japonica",
+        "rank": "species",
+        "fraction": 0.0007
+      },
+      {
+        "taxon": "Parargyrops edita",
+        "rank": "species",
+        "fraction": 0.0005
+      },
+      {
+        "taxon": "Saurida undosquamis",
+        "rank": "species",
+        "fraction": 0.0003
+      }
+    ],
+    "SRR16088629": [
+      {
+        "taxon": "Sardinella",
+        "rank": "genus",
+        "fraction": 0.7695
+      },
+      {
+        "taxon": "Gadus",
+        "rank": "genus",
+        "fraction": 0.1111
+      },
+      {
+        "taxon": "unassigned",
+        "rank": "none",
+        "fraction": 0.0631
+      },
+      {
+        "taxon": "Merluccius productus",
+        "rank": "species",
+        "fraction": 0.0127
+      },
+      {
+        "taxon": "Rastrelliger",
+        "rank": "genus",
+        "fraction": 0.0108
+      },
+      {
+        "taxon": "Engraulis ringens",
+        "rank": "species",
+        "fraction": 0.009
+      }
+    ],
+    "SRR16088630": [
+      {
+        "taxon": "Gadus",
+        "rank": "genus",
+        "fraction": 0.5952
+      },
+      {
+        "taxon": "unassigned",
+        "rank": "none",
+        "fraction": 0.3802
+      },
+      {
+        "taxon": "Pollachius virens",
+        "rank": "species",
+        "fraction": 0.0245
+      },
+      {
+        "taxon": "Sardinella",
+        "rank": "genus",
+        "fraction": 0.0001
+      }
+    ],
+    "SRR16088631": [
+      {
+        "taxon": "unassigned",
+        "rank": "none",
+        "fraction": 0.851
+      },
+      {
+        "taxon": "Merluccius",
+        "rank": "genus",
+        "fraction": 0.0884
+      },
+      {
+        "taxon": "Gadus",
+        "rank": "genus",
+        "fraction": 0.0521
+      },
+      {
+        "taxon": "Oncorhynchus",
+        "rank": "genus",
+        "fraction": 0.0052
+      },
+      {
+        "taxon": "Dicentrarchus labrax",
+        "rank": "species",
+        "fraction": 0.0033
+      }
+    ]
+  },
+  "nanopore": [
+    {
+      "sample": "King prawn tissue",
+      "truth": "Penaeus vannamei",
+      "call": "Tremoctopus",
+      "result": "wrong"
+    },
+    {
+      "sample": "Arctic cod processed tissue",
+      "truth": "Boreogadus saida",
+      "call": "Gadus",
+      "result": "wrong"
+    },
+    {
+      "sample": "Atlantic herring processed tissue",
+      "truth": "Clupea harengus",
+      "call": "Pollachius",
+      "result": "wrong"
+    },
+    {
+      "sample": "Mackerel processed tissue",
+      "truth": "Scomber scombrus",
+      "call": "Gymnosarda",
+      "result": "wrong"
+    },
+    {
+      "sample": "Atlantic salmon processed tissue",
+      "truth": "Salmo salar",
+      "call": "Salmo",
+      "result": "correct genus"
+    },
+    {
+      "sample": "Atlantic cod processed tissue",
+      "truth": "Gadus morhua",
+      "call": "Gadus",
+      "result": "correct genus"
+    },
+    {
+      "sample": "Skipjack tuna processed tissue",
+      "truth": "Katsuwonus pelamis",
+      "call": "Sarda",
+      "result": "wrong"
+    },
+    {
+      "sample": "Anchovy processed tissue",
+      "truth": "Engraulis anchoita",
+      "call": "Engraulis",
+      "result": "correct genus"
+    },
+    {
+      "sample": "Lamprey tissue",
+      "truth": "Lampetra sp",
+      "call": "Lampetra",
+      "result": "correct genus"
+    },
+    {
+      "sample": "Sea bream tissue",
+      "truth": "Sparus aurata",
+      "call": "Sparus",
+      "result": "correct genus"
+    },
+    {
+      "sample": "Blonde ray tissue",
+      "truth": "Raja brachyura",
+      "call": "Raja",
+      "result": "correct genus"
+    },
+    {
+      "sample": "Sardine tissue",
+      "truth": "Sardina pilchardus",
+      "call": "Sardina",
+      "result": "correct genus"
+    },
+    {
+      "sample": "Tope shark tissue",
+      "truth": "Galeorhinus galeus",
+      "call": "Galeorhinus",
+      "result": "correct genus"
+    },
+    {
+      "sample": "Red mullet tissue",
+      "truth": "Mullus surmuletus",
+      "call": "Mullus",
+      "result": "correct genus"
+    },
+    {
+      "sample": "Atlantic salmon tissue",
+      "truth": "Salmo salar",
+      "call": "Salmo",
+      "result": "correct genus"
+    },
+    {
+      "sample": "Senegalese tonguesole tissue 7 - Kigali via Entebbe flight",
+      "truth": "Cynoglossus senegalensis",
+      "call": "Cynoglossus senegalensis",
+      "result": "correct species"
+    },
+    {
+      "sample": "Snakehead fish tissue 6- Kigali via Entebbe flight",
+      "truth": "Parachanna sp",
+      "call": "Parachanna",
+      "result": "correct genus"
+    }
+  ],
+  "nanopore_summary": {
+    "wrong": 5,
+    "correct genus": 11,
+    "correct species": 1
+  },
+  "sensitivity": [
+    {
+      "identity": 90,
+      "margin": 0,
+      "false_id_rate": 0.353
+    },
+    {
+      "identity": 90,
+      "margin": 1,
+      "false_id_rate": 0.353
+    },
+    {
+      "identity": 90,
+      "margin": 2,
+      "false_id_rate": 0.294
+    },
+    {
+      "identity": 90,
+      "margin": 3,
+      "false_id_rate": 0.294
+    },
+    {
+      "identity": 90,
+      "margin": 5,
+      "false_id_rate": 0.294
+    },
+    {
+      "identity": 93,
+      "margin": 0,
+      "false_id_rate": 0.353
+    },
+    {
+      "identity": 93,
+      "margin": 1,
+      "false_id_rate": 0.412
+    },
+    {
+      "identity": 93,
+      "margin": 2,
+      "false_id_rate": 0.294
+    },
+    {
+      "identity": 93,
+      "margin": 3,
+      "false_id_rate": 0.353
+    },
+    {
+      "identity": 93,
+      "margin": 5,
+      "false_id_rate": 0.353
+    },
+    {
+      "identity": 95,
+      "margin": 0,
+      "false_id_rate": 0.471
+    },
+    {
+      "identity": 95,
+      "margin": 1,
+      "false_id_rate": 0.471
+    },
+    {
+      "identity": 95,
+      "margin": 2,
+      "false_id_rate": 0.353
+    },
+    {
+      "identity": 95,
+      "margin": 3,
+      "false_id_rate": 0.353
+    },
+    {
+      "identity": 95,
+      "margin": 5,
+      "false_id_rate": 0.353
+    },
+    {
+      "identity": 97,
+      "margin": 0,
+      "false_id_rate": 0.294
+    },
+    {
+      "identity": 97,
+      "margin": 1,
+      "false_id_rate": 0.294
+    },
+    {
+      "identity": 97,
+      "margin": 2,
+      "false_id_rate": 0.294
+    },
+    {
+      "identity": 97,
+      "margin": 3,
+      "false_id_rate": 0.294
+    },
+    {
+      "identity": 97,
+      "margin": 5,
+      "false_id_rate": 0.294
+    },
+    {
+      "identity": 98,
+      "margin": 0,
+      "false_id_rate": 0.294
+    },
+    {
+      "identity": 98,
+      "margin": 1,
+      "false_id_rate": 0.294
+    },
+    {
+      "identity": 98,
+      "margin": 2,
+      "false_id_rate": 0.294
+    },
+    {
+      "identity": 98,
+      "margin": 3,
+      "false_id_rate": 0.294
+    },
+    {
+      "identity": 98,
+      "margin": 5,
+      "false_id_rate": 0.294
+    },
+    {
+      "identity": 99,
+      "margin": 0,
+      "false_id_rate": 0.235
+    },
+    {
+      "identity": 99,
+      "margin": 1,
+      "false_id_rate": 0.235
+    },
+    {
+      "identity": 99,
+      "margin": 2,
+      "false_id_rate": 0.235
+    },
+    {
+      "identity": 99,
+      "margin": 3,
+      "false_id_rate": 0.235
+    },
+    {
+      "identity": 99,
+      "margin": 5,
+      "false_id_rate": 0.235
+    }
+  ],
+  "mock": [
+    {
+      "sample": "ExtC1a",
+      "expected": "Gadus morhua",
+      "detected": "",
+      "reads": 250,
+      "false_read_fraction": 0.0
+    },
+    {
+      "sample": "ExtH1a",
+      "expected": "Melanogrammus aeglefinus",
+      "detected": "",
+      "reads": 18077,
+      "false_read_fraction": 0.0039
+    },
+    {
+      "sample": "ExtW1a",
+      "expected": "Merlangius merlangus",
+      "detected": "",
+      "reads": 19321,
+      "false_read_fraction": 0.0004
+    },
+    {
+      "sample": "ExtCHW1a",
+      "expected": "Gadus morhua; Melanogrammus aeglefinus; Merlangius merlangus",
+      "detected": "",
+      "reads": 496,
+      "false_read_fraction": 0.0
+    },
+    {
+      "sample": "ExtCHW299a",
+      "expected": "Gadus morhua; Melanogrammus aeglefinus; Merlangius merlangus",
+      "detected": "",
+      "reads": 393,
+      "false_read_fraction": 0.0
+    },
+    {
+      "sample": "ExtCHW929a",
+      "expected": "Gadus morhua; Melanogrammus aeglefinus; Merlangius merlangus",
+      "detected": "",
+      "reads": 332,
+      "false_read_fraction": 0.0
+    },
+    {
+      "sample": "ExtCHW992a",
+      "expected": "Gadus morhua; Melanogrammus aeglefinus; Merlangius merlangus",
+      "detected": "",
+      "reads": 102,
+      "false_read_fraction": 0.0
+    },
+    {
+      "sample": "CHW1a_1",
+      "expected": "Gadus morhua; Melanogrammus aeglefinus; Merlangius merlangus",
+      "detected": "",
+      "reads": 19434,
+      "false_read_fraction": 0.0
+    },
+    {
+      "sample": "SWp",
+      "expected": "Anarhichas lupus; Gadus morhua",
+      "detected": "",
+      "reads": 17220,
+      "false_read_fraction": 0.0
+    },
+    {
+      "sample": "Silage_day_21",
+      "expected": "Anarhichas lupus; Gadus morhua; Melanogrammus aeglefinus; Merlangius merlangus",
+      "detected": "",
+      "reads": 9664,
+      "false_read_fraction": 0.0
+    }
+  ]
+}

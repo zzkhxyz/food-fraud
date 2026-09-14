@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Food Fraud - Seafood DNA Barcoding</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg: #f4f6f8;
+    --card: #ffffff;
+    --ink: #1c2b36;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --accent: #0e7490;
+    --green: #2e9e6b;
+    --red: #d8544a;
+    --amber: #e0a127;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  header {
+    background: linear-gradient(135deg, #0e7490, #155e75);
+    color: #fff;
+    padding: 40px 24px;
+  }
+  header .wrap { max-width: 1080px; margin: 0 auto; }
+  header h1 { margin: 0 0 8px; font-size: 30px; }
+  header p { margin: 0; max-width: 760px; opacity: 0.92; }
+  main { max-width: 1080px; margin: 0 auto; padding: 24px; }
+  section { margin-bottom: 32px; }
+  h2 { font-size: 20px; margin: 0 0 4px; }
+  .sub { color: var(--muted); margin: 0 0 16px; font-size: 14px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px;
+  }
+  .stat .n { font-size: 30px; font-weight: 700; }
+  .stat .l { color: var(--muted); font-size: 14px; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 720px) { .grid2 { grid-template-columns: 1fr; } }
+  .chart-box { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px; }
+  .chart-box h3 { margin: 0 0 12px; font-size: 15px; }
+  .canvas-wrap { position: relative; height: 260px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .table-scroll { overflow-x: auto; background: var(--card); border: 1px solid var(--line); border-radius: 12px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  th { background: #f8fafc; color: var(--muted); font-weight: 600; }
+  tr:last-child td { border-bottom: none; }
+  .badge { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+  .badge.green { background: #e3f5ec; color: #1d7a4f; }
+  .badge.red { background: #fbe5e3; color: #b13a31; }
+  .badge.amber { background: #fbf1dc; color: #9c6b12; }
+  .heat { display: grid; gap: 4px; }
+  .heat .row { display: grid; gap: 4px; grid-template-columns: 56px repeat(5, 1fr); align-items: center; }
+  .heat .cell { text-align: center; padding: 10px 0; border-radius: 6px; font-size: 13px; color: #fff; font-weight: 600; }
+  .heat .axis { color: var(--muted); font-size: 12px; text-align: center; }
+  .heat .rowlab { color: var(--muted); font-size: 12px; text-align: right; padding-right: 6px; }
+  footer { color: var(--muted); font-size: 13px; padding: 24px; text-align: center; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Is the Label Telling the Truth?</h1>
+    <p>Seafood is hard to recognise once it is filleted, breaded or turned into surimi. This project
+    reads the DNA of 20 processed seafood products and compares it with the species on the label,
+    using DNA barcoding against a reference built from BOLD and NCBI RefSeq.</p>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="cards" id="stats"></div>
+  </section>
+
+  <section>
+    <h2>Label vs DNA</h2>
+    <p class="sub">Each product: what the label says and what the DNA shows. Verdict is based on the
+    identification thresholds in config.yaml.</p>
+    <div class="grid2" style="margin-bottom:16px">
+      <div class="chart-box">
+        <h3>Verdicts</h3>
+        <div class="canvas-wrap"><canvas id="verdictChart"></canvas></div>
+      </div>
+      <div class="chart-box">
+        <h3>Reference size by marker</h3>
+        <div class="canvas-wrap"><canvas id="refChart"></canvas></div>
+      </div>
+    </div>
+    <div class="table-scroll">
+      <table id="illuminaTable">
+        <thead><tr>
+          <th>Product</th><th>Declared</th><th>Main taxon (DNA)</th><th>Share</th><th>Verdict</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Method accuracy (Nanopore control samples)</h2>
+    <p class="sub">17 samples of a single known species. The pipeline is reliable at genus level and
+    weaker at separating close species.</p>
+    <div class="grid2">
+      <div class="chart-box">
+        <h3>Calls against the truth</h3>
+        <div class="canvas-wrap"><canvas id="nanoChart"></canvas></div>
+      </div>
+      <div class="chart-box">
+        <h3>False identification rate by threshold</h3>
+        <p class="sub" style="margin-bottom:10px">Rows: minimum identity. Columns: minimum margin to
+        the second species. Greener is better.</p>
+        <div class="heat" id="heat"></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Mock mixtures</h2>
+    <p class="sub">Mixtures of cod, haddock, whiting and wolffish with known content. Bars show how
+    many reads were assigned per sample.</p>
+    <div class="chart-box">
+      <div class="canvas-wrap" style="height:300px"><canvas id="mockChart"></canvas></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Course Project 04, Introduction to Bioinformatics, Astana IT University.
+  Data: PRJNA766222, PRJNA1272083, PRJEB39300, BOLD v5, NCBI RefSeq.
+  Source: <a href="https://github.com/zzkhxyz/food-fraud">github.com/zzkhxyz/food-fraud</a>
+</footer>
+
+<script>
+const verdictColor = { "label confirmed": "green", "label not confirmed": "red", "label not specific": "amber" };
+const palette = { green: "#2e9e6b", red: "#d8544a", amber: "#e0a127", accent: "#0e7490", muted: "#94a3b8" };
+
+fetch("data.json").then(r => r.json()).then(data => {
+  const confirmed = data.illumina.filter(p => p.verdict === "label confirmed").length;
+  const stats = [
+    { n: data.illumina.length, l: "products tested" },
+    { n: confirmed, l: "labels confirmed" },
+    { n: data.nanopore.length, l: "control samples" },
+    { n: data.reference.reduce((s, m) => s + m.sequences, 0).toLocaleString(), l: "reference sequences" },
+  ];
+  document.getElementById("stats").innerHTML = stats.map(s =>
+    `<div class="card stat"><div class="n">${s.n}</div><div class="l">${s.l}</div></div>`).join("");
+
+  const counts = {};
+  data.illumina.forEach(p => counts[p.verdict] = (counts[p.verdict] || 0) + 1);
+  const vLabels = Object.keys(counts);
+  new Chart(document.getElementById("verdictChart"), {
+    type: "doughnut",
+    data: { labels: vLabels, datasets: [{ data: vLabels.map(k => counts[k]),
+      backgroundColor: vLabels.map(k => palette[verdictColor[k]]) }] },
+    options: { plugins: { legend: { position: "bottom" } } }
+  });
+
+  new Chart(document.getElementById("refChart"), {
+    type: "bar",
+    data: { labels: data.reference.map(m => m.marker),
+      datasets: [{ label: "sequences", data: data.reference.map(m => m.sequences), backgroundColor: palette.accent }] },
+    options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
+  });
+
+  const tbody = document.querySelector("#illuminaTable tbody");
+  tbody.innerHTML = data.illumina.map(p => {
+    const c = verdictColor[p.verdict] || "amber";
+    return `<tr>
+      <td>${p.product}</td>
+      <td>${p.declared}</td>
+      <td><i>${p.main_taxon}</i></td>
+      <td>${Math.round(p.main_fraction * 100)}%</td>
+      <td><span class="badge ${c}">${p.verdict.replace("label ", "")}</span></td>
+    </tr>`;
+  }).join("");
+
+  const s = data.nanopore_summary;
+  const nLabels = Object.keys(s);
+  const nColor = { "correct species": palette.green, "correct genus": palette.accent, "wrong": palette.red };
+  new Chart(document.getElementById("nanoChart"), {
+    type: "doughnut",
+    data: { labels: nLabels, datasets: [{ data: nLabels.map(k => s[k]),
+      backgroundColor: nLabels.map(k => nColor[k] || palette.muted) }] },
+    options: { plugins: { legend: { position: "bottom" } } }
+  });
+
+  const idents = [...new Set(data.sensitivity.map(d => d.identity))].sort((a, b) => a - b);
+  const margins = [...new Set(data.sensitivity.map(d => d.margin))].sort((a, b) => a - b);
+  const lookup = {};
+  data.sensitivity.forEach(d => lookup[d.identity + "_" + d.margin] = d.false_id_rate);
+  const heat = document.getElementById("heat");
+  let html = `<div class="row"><div class="rowlab"></div>` +
+    margins.map(m => `<div class="axis">m≥${m}</div>`).join("") + `</div>`;
+  idents.forEach(id => {
+    html += `<div class="row"><div class="rowlab">id≥${id}</div>` + margins.map(m => {
+      const v = lookup[id + "_" + m];
+      const g = Math.round(160 * (1 - v));
+      const bg = `rgb(${Math.round(216 - g * 0.7)}, ${90 + g}, ${74 + g * 0.3})`;
+      return `<div class="cell" style="background:${bg}">${Math.round(v * 100)}%</div>`;
+    }).join("") + `</div>`;
+  });
+  heat.innerHTML = html;
+
+  new Chart(document.getElementById("mockChart"), {
+    type: "bar",
+    data: { labels: data.mock.map(m => m.sample),
+      datasets: [{ label: "reads assigned", data: data.mock.map(m => m.reads), backgroundColor: palette.accent }] },
+    options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
+  });
+});
+</script>
+</body>
+</html>
