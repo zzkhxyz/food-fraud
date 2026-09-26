@@ -76,7 +76,8 @@ is a check on the quality of the reference.
 
 1. **Quality control** with `fastp`: trim low-quality bases and drop short reads.
 2. **Merge pairs** with `vsearch`: the forward and reverse read of one 16S amplicon overlap, so they
-   are merged into one longer sequence.
+   are merged into one longer sequence (19 of 20 runs merge 84-99% of pairs, mean fragment about 207 bp; one surimi run,
+   SRR16088625, merges only 26%, so its composition rests on fewer reads).
 3. **Denoise** with `vsearch` (UNOISE): group nearly identical sequences into ASVs
    (amplicon sequence variants) and remove errors and chimeras. An ASV is a clean, representative
    sequence with a read count.
@@ -189,8 +190,15 @@ report what the DNA shows.
 at genus level, and 5 are wrong. Long single-barcode reads identify the genus reliably but separate
 close species less well, which the sensitivity analysis confirms.
 
-**Mock mixtures (Nanopore).** The pipeline detects the expected cod, haddock, whiting and wolffish in
-the mixtures, showing that it can report more than one species in a single product.
+**Mock mixtures (Nanopore).** The mixtures are evaluated at genus level, because single mini-barcodes
+rarely separate close species (a genus counts as detected at 1% of reads or more). Five of the ten runs
+have thousands of assigned reads. In these five runs 11 of the 13 expected genera are found: the
+cod-haddock-whiting mix `CHW1a_1` and the cod-wolffish mix `SWp` are fully recovered, and the
+four-species `Silage_day_21` shows cod and wolffish but misses the minor haddock and whiting. The
+single-species haddock and whiting runs leak 27% and 13% of assigned reads to the other two cod-family
+genera, which are very close relatives. The other five runs have only 2 to 12 assigned reads, too few to
+judge. So the pipeline can report more than one fish in a product, but a small component of a close
+relative can be missed or confused.
 
 ## Limitations
 
@@ -201,6 +209,8 @@ the mixtures, showing that it can report more than one species in a single produ
   inside a genus.
 - Subsampling large Nanopore runs speeds up the run but lowers sensitivity for rare components in a
   mixture.
+- Inside the cod family (Gadus, Melanogrammus, Merlangius) Nanopore reads partly cross-assign between
+  genera, so a minor cod-family component in a mixture cannot be confirmed from these reads alone.
 
 ## Conclusions
 

@@ -67,3 +67,6 @@ nanopore_qc:
 sensitivity:
   identity: [90, 93, 95, 97, 98, 99]
   margin: [0, 1, 2, 3, 5]
+
+mock:
+  min_fraction: 0.01

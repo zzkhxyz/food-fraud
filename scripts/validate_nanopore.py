@@ -39,8 +39,8 @@ def compare(truth, call):
 def read_stats(path):
     stats = {}
     for line in open(path):
-        cols = line.rstrip("\n").split("\t")
-        if len(cols) > 5:
+        cols = line.split()
+        if len(cols) > 9 and cols[1] != "reads":
             stats[cols[0]] = {"reads": cols[1], "bases": cols[2], "n50": cols[3], "longest": cols[4],
                               "shortest": cols[5], "mean_length": cols[6], "median_length": cols[7],
                               "mean_quality": cols[8], "median_quality": cols[9]}

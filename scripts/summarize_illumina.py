@@ -18,7 +18,7 @@ def asv_sizes(path):
 
 def merge_stats(path):
     text = open(path).read()
-    merged = re.search(r"(\d+)\s+Pairs merged", text)
+    merged = re.search(r"(\d+)\s+Merged", text)
     total = re.search(r"(\d+)\s+Pairs", text)
     return int(merged.group(1)) if merged else 0, int(total.group(1)) if total else 0
 

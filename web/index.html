@@ -216,7 +216,7 @@ fetch("data.json").then(r => r.json()).then(data => {
   new Chart(document.getElementById("mockChart"), {
     type: "bar",
     data: { labels: data.mock.map(m => m.sample),
-      datasets: [{ label: "reads assigned", data: data.mock.map(m => m.reads), backgroundColor: palette.accent }] },
+      datasets: [{ label: "reads assigned", data: data.mock.map(m => m.assigned_reads), backgroundColor: palette.accent }] },
     options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
   });
 });

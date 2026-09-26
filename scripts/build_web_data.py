@@ -71,8 +71,10 @@ for row in read(results / "mock" / "mock_eval.tsv"):
     mock.append({
         "sample": row["sample"],
         "expected": row["expected"],
-        "detected": row["detected"],
+        "detected": row["detected_genus"],
+        "missed": row["missed_genus"],
         "reads": int(row["reads"]),
+        "assigned_reads": int(row["assigned_reads"]),
         "false_read_fraction": float(row["false_read_fraction"]),
     })
 
