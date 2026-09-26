@@ -67,6 +67,9 @@
   .heat .rowlab { color: var(--muted); font-size: 12px; text-align: right; padding-right: 6px; }
   footer { color: var(--muted); font-size: 13px; padding: 24px; text-align: center; }
   a { color: var(--accent); }
+  .hero-figure { margin: 0 0 32px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  .hero-figure img { display: block; width: 100%; height: auto; }
+  .hero-figure figcaption { padding: 10px 16px; font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); }
 </style>
 </head>
 <body>
@@ -80,6 +83,11 @@
 </header>
 
 <main>
+  <figure class="hero-figure">
+    <img src="hero.jpg" alt="Infographic comparing the species declared on a seafood label with the species found by DNA testing">
+    <figcaption>Illustration of the idea behind the project: a label claim checked against a DNA test.
+    The fish and percentages in this picture are an example, not our measurements. Our real results are below.</figcaption>
+  </figure>
   <section>
     <div class="cards" id="stats"></div>
   </section>
