@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Food Fraud — Is the Label Telling the Truth?</title>
+<meta name="author" content="Zhan Tabuldinov">
 <meta name="description" content="DNA barcoding of 20 processed seafood products: what the label says and what the DNA shows.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -189,17 +190,17 @@
 
 <header class="hero center">
   <div class="wrap">
-    <p class="eyebrow">DNA barcoding · 20 seafood products</p>
+    <p class="eyebrow">DNA barcoding · 20 seafood products · by Zhan Tabuldinov</p>
     <h1>Is the label telling the truth?</h1>
     <p class="lead">Once fish is breaded, minced or pressed into surimi, nobody can tell the species by eye.
-      Its DNA is still there. We read it and compared it with the label.</p>
+      Its DNA is still there. I read it and compared it with the label.</p>
     <div class="links">
       <a href="#products">See every product</a>
       <a href="https://github.com/zzkhxyz/food-fraud">View the pipeline</a>
     </div>
     <figure class="hero-media">
       <img src="hero.jpg" alt="Illustration comparing the species declared on a seafood label with the species found by DNA testing" width="1376" height="768">
-      <figcaption>Illustration of the idea. The fish and percentages in this picture are an example, not our measurements.</figcaption>
+      <figcaption>Illustration of the idea. The fish and percentages in this picture are an example, not my measurements.</figcaption>
     </figure>
   </div>
 </header>
@@ -207,7 +208,7 @@
 <section class="grey center" id="results">
   <div class="wrap">
     <h2>Named species held up.</h2>
-    <p class="lead">Every product that promised a species contained it, except one we could not read.
+    <p class="lead">Every product that promised a species contained it, except one I could not read.
       Most products promised no species at all.</p>
     <div class="numbers" id="numbers"></div>
   </div>
@@ -228,7 +229,7 @@
 <section id="products">
   <div class="wrap center">
     <h2>Every product. Label vs. DNA.</h2>
-    <p class="lead">Each bar is the share of reads assigned to each fish. Grey is DNA we could not
+    <p class="lead">Each bar is the share of reads assigned to each fish. Grey is DNA I could not
       assign with confidence.</p>
     <div class="filters" id="filters" role="group" aria-label="Filter products"></div>
   </div>
@@ -256,7 +257,7 @@
         <h3>False identification rate</h3>
         <p class="sub">Rows: minimum identity. Columns: minimum margin to the second species.</p>
         <div class="heat" id="heat"></div>
-        <p class="heat-note">Outlined cell is the setting we use. Stricter identity lowers the error, but
+        <p class="heat-note">Outlined cell is the setting I use. Stricter identity lowers the error, but
           at 99% the pipeline never names a species.</p>
       </div>
     </div>
@@ -301,7 +302,7 @@
 
 <footer>
   <div class="wrap">
-    <p>Course Project 04, Introduction to Bioinformatics, Astana IT University. Public data retrieved 11 September 2026:
+    <p>Zhan Tabuldinov, BDA-2401. Course Project 04, Introduction to Bioinformatics, Astana IT University. Public data retrieved 11 September 2026:
       Illumina PRJNA766222, Nanopore PRJNA1272083 and PRJEB39300, BOLD Systems v5, NCBI RefSeq.</p>
     <div class="row">
       <span>Reproducible with Docker and Snakemake.</span>
